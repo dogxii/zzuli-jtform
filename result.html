@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>学生请假通行结果单</title>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #333;
+      background: linear-gradient(135deg, #F1F8E9, #E8F5E9);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      background: #fff;
+      /*border-radius: 16px;*/
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 420px;
+      margin: auto;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
+      color: #fff;
+      padding: 32px 24px 0 24px;
+      position: relative;
+    }
+
+    .wave-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 30%;
+      bottom: 0;
+      opacity: 0.1;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .check-icon {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      padding: 12px;
+      margin-bottom: 16px;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .time-display {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      padding: 24px;
+      flex: 1;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .info-item {
+      background: #E8F5E9;
+      border-radius: 8px;
+      padding: 16px;
+      border-left: 4px solid #4CAF50;
+    }
+
+    .info-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #6b7280;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .name-value {
+      color: #2E7D32;
+    }
+
+    .button {
+      margin-top: 16px;
+      background: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #2E7D32;
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .pulse-seconds {
+      animation: pulse 1s linear;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .scale-95 {
+      transform: scale(0.95);
+    }
+
+    .white-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      z-index: 2147483647;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card animate-fadeIn">
+    <div class="header">
+      <div class="wave-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#fff" fill-opacity="1"
+            d="M0,192L48,186.7C96,181,192,171,288,181.3C384,192,480,224,576,229.3C672,235,768,213,864,197.3C960,181,1056,171,1152,170.7C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+          </path>
+        </svg>
+      </div>
+      <div class="header-content">
+        <h1>验证成功</h1>
+        <div class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m-1.177-7.86l-2.765-2.767L7 12.431l3.119 3.121a1 1 0 0 0 1.414 0l5.952-5.95l-1.062-1.062z" />
+          </svg></div>
+        <p class="time-display" id="current-time">
+          <span id="date-part"></span>
+          <span id="time-part">
+            <span id="hours"></span>时
+            <span id="minutes"></span>分
+            <span id="seconds"></span>秒
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="info-grid">
+        <div class="info-item">
+          <h3 class="info-label">请假时间</h3>
+          <p class="info-value" id="leave-time">2025-10-01 至 2025-10-08</p>
+        </div>
+        <div class="info-item">
+          <h3 class="info-label">院系</h3>
+          <p class="info-value" id="department">软件学院</p>
+        </div>
+        <div class="info-item">
+          <h3 class="info-label">专业</h3>
+          <p class="info-value" id="major">数字媒体技术</p>
+        </div>
+        <div class="info-item">
+          <h3 class="info-label">班级</h3>
+          <p class="info-value" id="class">数媒技术24-01</p>
+        </div>
+        <div class="info-item">
+          <h3 class="info-label">姓名</h3>
+          <p class="info-value name-value" id="student-name">奶龙</p>
+        </div>
+        <div class="info-item">
+          <h3 class="info-label">学号</h3>
+          <p class="info-value" id="student-id">542413570101</p>
+        </div>
+      </div>
+      <button id="approval-btn" class="button">点击查看审批单</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lz-string@1.4.4/libs/lz-string.min.js"></script>
+  <script>
+    function formatNumber(num) {return String(num).padStart(2, '0');}
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById('date-part').textContent = now.getFullYear() + '年' + formatNumber(now.getMonth() + 1) + '月' + formatNumber(now.getDate()) + '日';
+      document.getElementById('hours').textContent = formatNumber(now.getHours());
+      document.getElementById('minutes').textContent = formatNumber(now.getMinutes());
+      const secondsElement = document.getElementById('seconds');
+      const oldSeconds = secondsElement.textContent;
+      secondsElement.textContent = formatNumber(now.getSeconds());
+      if (oldSeconds !== secondsElement.textContent) {
+        secondsElement.classList.add('pulse-seconds');
+        setTimeout(() => {secondsElement.classList.remove('pulse-seconds');}, 1000);
+      }
+    }
+    setInterval(updateDateTime, 1000); updateDateTime();
+
+    // 解析参数并填充
+    function fillInfoFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      let data = null;
+      if (params.has('d')) {
+        try {
+          data = JSON.parse(LZString.decompressFromEncodedURIComponent(params.get('d')));
+        } catch (e) {data = null;}
+      }
+      // 兼容明文参数
+      if (!data) {
+        data = {
+          leaveTime: params.get('leaveTime') || '',
+          department: params.get('department') || '',
+          major: params.get('major') || '',
+          class: params.get('class') || '',
+          name: params.get('name') || '',
+          studentId: params.get('studentId') || ''
+        };
+      }
+      document.getElementById('leave-time').textContent = data.leaveTime || '';
+      document.getElementById('department').textContent = data.department || '';
+      document.getElementById('major').textContent = data.major || '';
+      document.getElementById('class').textContent = data.class || '';
+      document.getElementById('student-name').textContent = data.name || '';
+      document.getElementById('student-id').textContent = data.studentId || '';
+    }
+    fillInfoFromUrl();
+
+    // 按钮动画和遮罩
+    document.getElementById('approval-btn').onclick = function () {
+      this.classList.add('scale-95');
+      setTimeout(() => {
+        this.classList.remove('scale-95');
+        let overlay = document.getElementById('__white_overlay__');
+        if (!overlay) {
+          overlay = document.createElement('div');
+          overlay.id = '__white_overlay__';
+          overlay.className = 'white-overlay';
+          document.body.appendChild(overlay);
+        }
+        document.title = '一网通办';
+      }, 150);
+    };
+  </script>
+</body>
+
+</html>

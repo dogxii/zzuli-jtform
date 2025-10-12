@@ -1,0 +1,222 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family:
+    "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+button,
+label,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* header图标 */
+
+.icon-btn {
+  position: relative;
+  padding: 8px 0 2px 0;
+  font-size: 16px;
+  font-style: normal;
+  color: #fff;
+  margin-left: 12px;
+}
+
+.back-btn {
+  width: 30px;
+}
+
+.close-btn {
+  width: 30px;
+}
+
+/* header */
+
+.header {
+  background-color: #1d4481;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1200;
+  top: 0;
+}
+
+.header .title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 44px;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  right: 40px;
+  left: 40px;
+  width: auto;
+  pointer-events: none;
+}
+
+/* nav | tab-bar */
+
+.tab-bar {
+  display: flex;
+  position: fixed;
+  top: 44px;
+  z-index: 9998;
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.tab {
+  width: 50%;
+  text-align: center;
+  color: #333;
+  height: 44px;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  border-bottom: 2px solid #d22e2e;
+  /*border-radius: 2px;*/
+}
+
+/* form-section */
+
+.form-section {
+  position: relative;
+  top: 89px;
+  padding: 15px;
+  padding-bottom: 65px;
+}
+
+.form-section h2 {
+  margin: 10px 0 12px 0;
+  padding: 10px 0 12px 0;
+  font-size: 24px;
+  border-bottom: 3px solid #616266;
+  font-weight: 500;
+  text-align: center;
+  color: #616266;
+}
+
+/* form */
+
+.form-row {
+  height: 48px;
+  border: 1px solid rgba(122, 193, 249, 1);
+  margin-bottom: -1px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.form-row > label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  color: #606266;
+  height: 100%;
+  width: 30%;
+  background: #f2f9fe;
+  padding: 5px;
+  line-height: 1.4;
+  border-right: 1px solid rgba(122, 193, 249, 1);
+  overflow: hidden;
+}
+
+/* for preview.html */
+.form-row > .form-right {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.form-row > input,
+.form-row > select,
+.form-row > textarea {
+  padding: 8px;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/* 单独拉出来 leaveDays*/
+/*.form-row #leaveDays {
+  padding: 8px;
+  margin-left: 5px;
+  font-size: 14px;
+}*/
+
+/* required | * 没什么用= = */
+
+.required::before {
+  content: "*";
+}
+
+.required {
+  color: #f56c6c;
+  font-size: 19px;
+  margin-right: 6px;
+}
+
+/* radio-group */
+
+.radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group label {
+  font-size: 14px;
+  padding: 5px;
+}
+
+/* radio 要隐藏原来radio+label伪元素 懒的搞了 qwq */
+
+/* form-footer */
+
+.form-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border: 1px solid #e5e5e5;
+  z-index: 9998;
+  padding: 0 5%;
+}
+
+.form-footer button {
+  color: #fff;
+  height: 34px;
+  border: 1px solid #3aa1e7;
+  background-color: #3aa1e7;
+  border-radius: 20px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  cursor: pointer;
+}
