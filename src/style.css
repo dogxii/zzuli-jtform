@@ -229,6 +229,13 @@ textarea {
   padding: 0 5%;
 }
 
+.form-footer a {
+  position: absolute;
+  left: 22px;
+  text-decoration: none;
+  color: #3aa1e7;
+}
+
 .form-footer button {
   color: #fff;
   height: 34px;
