@@ -14,14 +14,12 @@
 <body>
   <div id="app">
     <header class="header" style="z-index: 9999">
-      <!-- biome-ignore lint/a11y/noSvgWithoutTitle: can -->
-      <button class="icon-btn back-btn" id="backBtn" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+      <button class="icon-btn back-btn" id="backBtn"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
           viewBox="0 0 12 24">
           <path fill="currentColor" fill-rule="evenodd"
             d="M10 19.438L8.955 20.5l-7.666-7.79a1.02 1.02 0 0 1 0-1.42L8.955 3.5L10 4.563L2.682 12z" />
         </svg></button>
-      <!-- biome-ignore lint/a11y/noSvgWithoutTitle: can -->
-      <button class="icon-btn close-btn" id="closeBtn" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+      <button class="icon-btn close-btn" id="closeBtn"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
           viewBox="0 0 24 24">
           <defs>
             <path id="SVG0kegTdID" fill="currentColor"
@@ -30,19 +28,21 @@
           <use fill-rule="evenodd" href="#SVG0kegTdID" transform="translate(4 4)" />
         </svg></button>
       <h1 class="title">学生请假</h1>
-      <button class="icon-btn star-btn" type="button"></button>
+      <button class="icon-btn star-btn"></button>
     </header>
 
     <nav class="tab-bar" style="z-index: 9999">
-      <button class="tab active" id="tabRegister" type="button">登记表</button>
-      <button class="tab" id="tabProcess" type="button">签批流程</button>
+      <button class="tab active" id="tabRegister">登记表</button>
+      <button class="tab" id="tabProcess">签批流程</button>
     </nav>
 
     <main class="form-section" style="padding-bottom: 65px;">
-      <h2>学生请假申请表</h2>
-      <div class="group-smalltitle" style="padding-top: 10px;">
-        <div class="smalltitle" style="text-align:left;border-radius:0px;border-bottom:1px solid;padding:10px 0px 12px;color:rgb(96,98,102);font-size:14px"><i class="iconfont1680373" style="font-size:14px;margin-right:5px"></i><span style="font-size:14px;font-weight: 500;">基本信息</span>
-        </div>
+      <h2>学生请假申请单</h2>
+      <div class="mask_divs"></div>
+      <img class="qrcode" src="img/qrcode.webp" alt="">
+      <div class="seal"><img src="img/seal.png" alt="">
+        <span id="sealId">2a24c622f84547ab</span>
+        <span id="sealTime">2025-10-13 00:00</span>
       </div>
 
       <form id="leaveForm">
@@ -96,11 +96,6 @@
           <span class="form-right" id="contact">13349493393</span>
         </div>
 
-        <div class="group-smalltitle">
-          <div class="smalltitle" style="text-align:left;border-radius:0px;border-bottom:1px solid;padding:10px 0px 12px;color:rgb(96,98,102);font-size:14px"><i class="iconfont1680373" style="font-size:14px;margin-right:5px"></i><span style="font-size:14px;font-weight: 500;">请假信息</span>
-          </div>
-        </div>
-
         <div class="form-row" style="height: 44px;">
           <label>请假类型</label>
           <span class="form-right" id="leaveType">病假</span>
@@ -122,7 +117,7 @@
         </div>
 
         <div class="form-row">
-          <label for="leaveDays">请假天数</label>
+          <label for="leaveDays"></span>请假天数</label>
           <span class="form-right" id="leaveDays">1</span>
         </div>
 
@@ -152,7 +147,7 @@
         </div>
 
         <div class="form-row" style="height: 44px;">
-          <label for="reason">请假事由</label>
+          <label for=" reason">请假事由</label>
           <span class="form-right" id="reason">要去拯救世界</span>
         </div>
 
@@ -160,18 +155,12 @@
           <label for="attachment">附件</label>
         </div>
 
-        <div class="group-smalltitle">
-          <div class="smalltitle" style="text-align:left;border-radius:0px;border-bottom:1px solid;padding:10px 0px 12px;color:rgb(96,98,102);font-size:14px"><i class="iconfont1680373" style="font-size:14px;margin-right:5px"></i><span style="font-size:14px;font-weight: 500;">审批流程</span>
-          </div>
-        </div>
-
-        <div class="form-row" style="height: 130px;">
+        <div class="form-row" style="height: 120px;">
           <label for="tutorOpinion">辅导员意见</label>
-          <div class="form-opinion" style="padding-top: 32px;">
+          <div class="form-opinion">
             <span id="tutorOpinion">同意。</span>
             <div class="right-bottom">
-              <span id="tutorDepartment">软件学院</span>
-              <span id="tutorName" style="padding: 1px 0;">小七</span>
+              <span id="tutorName">小七</span>
               <span id="tutorDate">2025-10-13</span>
             </div>
 

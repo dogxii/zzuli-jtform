@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./banner/banner-dark.webp">
-  <source media="(prefers-color-scheme: light)" srcset="./banner/banner-light.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/banner/banner-dark.webp">
+  <source media="(prefers-color-scheme: light)" srcset="./docs/banner/banner-light.webp">
   <img alt="zzuli-developers" src="./banner/banner-light.webp">
 </picture>
 
@@ -13,15 +13,11 @@ https://jt.dogxi.me
 > [!NOTE]
 > 本项目仅用于个人学习前端开发使用，请勿用于违法用途，任何人使用所造成的直接或间接产生的后果与作者本人无关。
 
-
-
 把时间花在对的事情上。**为之则易，不为则难**。
 
-## jtform 2.0版本 🎉
+## jtform 3.0版本 🎉
 
-当前版本为i轻工大 **2025.10.13** 更新的新假条版本。
-
-目前实现了登记表全页样式，可跳转二维码生成，相似度99%，
+当前版本为i轻工大 **2026.3.7** 更新的新假条版本。
 
 ⭕️ 签批流程页面还没有去做。
 
@@ -67,4 +63,4 @@ npx gulp
 
 可以任意修改与分发代码，只需要保留原作者署名。
 
-[@Dogxi](https://github.com/dogxii)
+MIT [@Dogxi](https://github.com/dogxii)

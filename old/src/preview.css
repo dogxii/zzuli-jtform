@@ -1,0 +1,110 @@
+/* form-opinion */
+
+.form-opinion {
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  white-space: pre-line;
+  font-size: 14px;
+  color: #333;
+  width: 70%;
+}
+
+.form-opinion #tutorOpinion {
+  margin-bottom: 5px;
+  padding-left: 27px;
+}
+
+.form-opinion .right-bottom {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 100%;
+  color: #666666;
+}
+
+.form-opinion .right-bottom #tutorName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form-opinion .right-bottom #tutorDate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* qrcode */
+.qrcode {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 100;
+  cursor: pointer;
+  width: 98px;
+}
+
+/* mask_div */
+
+.mask_divs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1030;
+}
+
+/* 遮挡二维码的水印 */
+.mask_div:nth-child(2) {
+  opacity: 0.6;
+}
+
+.mask_div {
+  transform: rotate(-20deg);
+  position: absolute;
+  z-index: 1031;
+  /*opacity: 60;*/
+  font-size: 13px;
+  font-family: "微软雅黑";
+  color: rgb(221, 221, 221);
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  display: block;
+  pointer-events: none;
+}
+
+/* seal 印章 */
+
+.seal {
+  position: absolute;
+  width: 200px;
+  bottom: 51px;
+  right: 0px;
+  z-index: 100;
+}
+
+.seal img {
+  width: 200px;
+}
+
+.seal #sealId {
+  position: absolute;
+  left: 11px;
+  top: 53px;
+  color: rgb(100, 181, 246);
+  font-size: 12px;
+}
+
+.seal #sealTime {
+  position: absolute;
+  left: 11px;
+  top: 69px;
+  color: rgb(100, 181, 246);
+  font-size: 12px;
+}
