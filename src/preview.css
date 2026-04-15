@@ -138,3 +138,43 @@
 	color: rgb(100, 181, 246);
 	font-size: 12px;
 }
+
+.btn-export.is-loading,
+.btn-export:disabled {
+	opacity: 0.7;
+	cursor: wait;
+}
+
+body.exporting-long-image {
+	cursor: progress;
+}
+
+.capture-sandbox {
+	position: fixed;
+	left: -100000px;
+	top: 0;
+	z-index: -1;
+	pointer-events: none;
+	opacity: 0;
+	background: #fff;
+}
+
+.capture-mode {
+	width: 100%;
+	background: #fff;
+}
+
+.capture-mode .header,
+.capture-mode .tab-bar {
+	position: static !important;
+	width: 100% !important;
+}
+
+.capture-mode .form-section {
+	top: 0 !important;
+	padding-top: 15px !important;
+}
+
+.capture-mode .form-footer {
+	display: none !important;
+}
