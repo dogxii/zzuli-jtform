@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">i假条</string>
+    <string name="title_activity_main">i假条</string>
+    <string name="package_name">me.dogxi.jt</string>
+    <string name="custom_url_scheme">me.dogxi.jt</string>
+</resources>
