@@ -1,0 +1,29 @@
+{
+  "name": "jtform-mobile",
+  "version": "1.0.0",
+  "description": "Capacitor wrapper for jt.dogxi.me",
+  "main": "index.js",
+  "scripts": {
+    "copy": "npx cap copy",
+    "sync": "npx cap sync",
+    "add:ios": "npx cap add ios",
+    "add:android": "npx cap add android",
+    "open:ios": "npx cap open ios",
+    "open:android": "npx cap open android"
+  },
+  "keywords": [
+    "capacitor",
+    "ios",
+    "android",
+    "jtform"
+  ],
+  "author": "Dogxi",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@capacitor/android": "^8.3.0",
+    "@capacitor/cli": "^8.3.0",
+    "@capacitor/core": "^8.3.0",
+    "@capacitor/ios": "^8.3.0"
+  }
+}
