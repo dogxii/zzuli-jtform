@@ -15,9 +15,12 @@ https://jt.dogxi.me
 
 把时间花在对的事情上。**为之则易，不为则难**。
 
-## jtform 3.0版本 🎉
+## jtform 4.0 版本 🎉
 
 当前版本为i轻工大 **2026.3.7** 更新的新假条版本。
+
+➕ 支持长图导出（右上角收藏按钮）
+➕ 提供本地 Android 版本，见 [Release](https://github.com/dogxii/zzuli-jtform/releases/latest)。
 
 ⭕️ 签批流程页面还没有去做。
 
