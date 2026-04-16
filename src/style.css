@@ -7,9 +7,15 @@
 	box-sizing: border-box;
 }
 
+html,
 body {
 	margin: 0;
 	background-color: #fff;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	font-synthesis: none;
+	font-synthesis-weight: none;
+	font-synthesis-style: none;
 	font-family:
 		Helvetica Neue,
 		Helvetica,
