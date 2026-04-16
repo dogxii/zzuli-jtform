@@ -19,8 +19,9 @@ https://jt.dogxi.me
 
 当前版本为i轻工大 **2026.3.7** 更新的新假条版本。
 
-➕ 支持长图导出（右上角收藏按钮）
-➕ 提供本地 Android 版本，见 [Release](https://github.com/dogxii/zzuli-jtform/releases/latest)。
+✅ 支持长图导出（右上角收藏按钮）
+
+✅ 提供本地 Android 版本，见 [Release](https://github.com/dogxii/zzuli-jtform/releases/latest)。
 
 ⭕️ 签批流程页面还没有去做。
 
