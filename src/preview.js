@@ -181,8 +181,9 @@ function setExportButtonLoading(button, isLoading) {
 	}
 
 	button.disabled = isLoading;
-	button.textContent = isLoading ? "正在生成..." : "导出长图";
 	button.classList.toggle("is-loading", isLoading);
+	button.setAttribute("aria-busy", isLoading ? "true" : "false");
+	button.title = isLoading ? "正在生成图片" : "导出图片";
 	document.body.classList.toggle("exporting-long-image", isLoading);
 }
 
@@ -215,10 +216,12 @@ function createCaptureSandbox() {
 		clone.style.width = `${exportWidth}px`;
 		clone.style.fontFamily = window.getComputedStyle(document.body).fontFamily;
 
-	const clonedExportButton = clone.querySelector("#exportLongImageBtn");
-	if (clonedExportButton) {
-		clonedExportButton.remove();
-	}
+		const clonedExportButton = clone.querySelector("#exportLongImageBtn");
+		if (clonedExportButton) {
+			clonedExportButton.classList.remove("is-loading");
+			clonedExportButton.disabled = false;
+			clonedExportButton.removeAttribute("aria-busy");
+		}
 
 	sandbox.appendChild(clone);
 	document.body.appendChild(sandbox);
@@ -430,9 +433,7 @@ function initPreviewPage() {
 		document.getElementById("tabRegister").classList.remove("active");
 	});
 
-	document
-		.getElementById("exportLongImageBtn")
-		.addEventListener("click", exportLongImage);
+	document.getElementById("exportLongImageBtn").addEventListener("click", exportLongImage);
 }
 
 // DOM加载完成时初始化
