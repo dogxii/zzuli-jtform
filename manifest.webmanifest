@@ -1,0 +1,11 @@
+{
+  "id": "./",
+  "name": "学生请假",
+  "short_name": "学生请假",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4481"
+}

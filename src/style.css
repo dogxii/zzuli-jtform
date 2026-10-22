@@ -133,9 +133,9 @@ select {
 
 .form-section {
 	position: relative;
-	top: calc(89px + env(safe-area-inset-top, 0));
+	margin-top: calc(89px + env(safe-area-inset-top, 0));
 	padding: 15px;
-	padding-bottom: 65px;
+	padding-bottom: calc(65px + env(safe-area-inset-bottom, 0));
 }
 
 .form-section h2 {
@@ -230,13 +230,13 @@ select {
 	bottom: 0;
 	width: 100%;
 	background-color: #fff;
-	height: 50px;
+	height: calc(50px + env(safe-area-inset-bottom, 0));
 	display: flex;
 	align-items: center;
 	justify-content: end;
 	border: 1px solid #e5e5e5;
 	z-index: 9998;
-	padding: 0 5%;
+	padding: 0 5% env(safe-area-inset-bottom, 0);
 }
 
 .form-footer a {

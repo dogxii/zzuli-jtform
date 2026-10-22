@@ -8,7 +8,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="学生请假">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1d4481">
   <title>学生请假申请单</title>
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="src/style.css">
   <link rel="stylesheet" href="src/preview.css">
   <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
@@ -42,7 +44,7 @@
       <button class="tab" id="tabProcess" type="button">签批流程</button>
     </nav>
 
-    <main class="form-section" style="padding-bottom: 65px;">
+    <main class="form-section">
       <h2>学生请假申请表</h2>
       <div class="group-smalltitle" style="padding-top: 10px;">
         <div class="smalltitle" style="text-align:left;border-radius:0px;border-bottom:1px solid;padding:10px 0px 12px;color:rgb(96,98,102);font-size:14px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" aria-hidden="true" style="display:inline-block;margin-right:5px;vertical-align:-0.125em"><g transform="translate(0 896) scale(1 -1)"><path fill="currentColor" stroke="currentColor" stroke-width="36" stroke-linejoin="round" paint-order="stroke fill" d="M863 780Q869 786 877 788.5Q885 791 893.5 788.5Q902 786 908 780Q914 774 916.5 765.5Q919 757 916.5 749Q914 741 908 735L455 282Q446 273 433 273Q420 273 410.5 282.5Q401 292 401 305Q401 318 410 327ZM853 448Q853 461 862.5 470.5Q872 480 885.5 480Q899 480 908 470.5Q917 461 917 448V96Q917 64 901.5 37Q886 10 859 -5.5Q832 -21 800 -21H224Q192 -21 165 -5.5Q138 10 122.5 37Q107 64 107 96V672Q107 704 122.5 731Q138 758 165 773.5Q192 789 224 789H565Q579 789 588 780Q597 771 597 757.5Q597 744 588 734.5Q579 725 565 725H224Q202 725 186.5 709.5Q171 694 171 672V96Q171 74 186.5 58.5Q202 43 224 43H800Q822 43 837.5 58.5Q853 74 853 96Z"/></g></svg><span style="font-size:14px;font-weight: 500;">基本信息</span>
@@ -194,8 +196,6 @@
       </form>
 
     </main>
-
-    <div class="form-footer"></div>
 
   </div>
 

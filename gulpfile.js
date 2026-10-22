@@ -33,5 +33,11 @@ gulp.task('minify-js', () => {
     .pipe(gulp.dest('public/src')); // 输出到 public/src 文件夹
 });
 
-// 默认任务：同时压缩 HTML、CSS 和 JS
-gulp.task('default', gulp.parallel('minify-html', 'minify-css', 'minify-js'));
+// 两个页面必须使用同一份应用范围配置，构建时一起发布。
+gulp.task('copy-manifest', () => {
+  return gulp.src('manifest.webmanifest')
+    .pipe(gulp.dest('public'));
+});
+
+// 默认任务：同时压缩 HTML、CSS 和 JS，并复制 Web App 配置
+gulp.task('default', gulp.parallel('minify-html', 'minify-css', 'minify-js', 'copy-manifest'));

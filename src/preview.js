@@ -384,6 +384,11 @@ function initPreviewPage() {
 	});
 
 	document.getElementById("closeBtn").addEventListener("click", async () => {
+		// 主屏幕 Web App 的独立显示模式不由 Fullscreen API 控制。
+		if (navigator.standalone || window.matchMedia("(display-mode: standalone)").matches) {
+			return;
+		}
+
 		try {
 			const isFullscreen = Boolean(
 				document.fullscreenElement ||
@@ -415,7 +420,7 @@ function initPreviewPage() {
 			} else if (root.msRequestFullscreen) {
 				await root.msRequestFullscreen();
 			} else {
-				throw new Error("浏览器不支持 Fullscreen API");
+				alert("当前浏览器不支持页面全屏。请在 Safari 的分享菜单中选择“添加到主屏幕”，然后从主屏幕打开。");
 			}
 		} catch (error) {
 			console.error("页面全屏切换失败:", error);

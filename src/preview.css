@@ -1,3 +1,7 @@
+.form-section {
+	padding-bottom: calc(15px + env(safe-area-inset-bottom, 0));
+}
+
 .group-smalltitle {
 	border: 0 !important;
 	margin: 10px -1px 12px 0 !important;
@@ -155,6 +159,7 @@ body.exporting-long-image {
 .capture-mode .header {
 	position: relative !important;
 	width: 100% !important;
+	padding-top: 0 !important;
 }
 
 .capture-mode .tab-bar {
@@ -163,11 +168,7 @@ body.exporting-long-image {
 }
 
 .capture-mode .form-section {
-	top: 0 !important;
+	margin-top: 0 !important;
 	padding-top: 15px !important;
 	padding-bottom: 15px !important;
-}
-
-.capture-mode .form-footer {
-	display: none !important;
 }
